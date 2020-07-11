@@ -157,6 +157,5 @@ func resourceArmMigrateProjectDelete(d *schema.ResourceData, meta interface{}) e
 		}
 		return fmt.Errorf("Error deleting migrate project %s (resource group %s): %+v", id.Name, id.ResourceGroup, err)
 	}
-
 	return nil
 }
