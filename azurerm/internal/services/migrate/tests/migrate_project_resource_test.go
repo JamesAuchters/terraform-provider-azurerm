@@ -38,7 +38,7 @@ func TestAccAzureRMMigrateProject_requiresImport(t *testing.T) {
 	resource.ParallelTest(t, resource.TestCase{
 		PreCheck:     func() { acceptance.PreCheck(t) },
 		Providers:    acceptance.SupportedProviders,
-		CheckDestroy: testCheckAzureRMMariaDbDatabaseDestroy,
+		CheckDestroy: testCheckAzureRMMigrateProjectDestroy,
 		Steps: []resource.TestStep{
 			{
 				Config: testAccAzureRMMigrateProject_basic(data),
