@@ -133,9 +133,9 @@ func testAccAzureRMMigrateProject_requiresImport(data acceptance.TestData) strin
 	return fmt.Sprintf(`
 %s
 
-resource "azurerm_mariadb_database" "import" {
-  name                = azurerm_mariadb_database.test.name
-  resource_group_name = azurerm_mariadb_database.test.resource_group_name
+resource "azurerm_migrate_project" "import" {
+  name                = azurerm_migrate_project.test.name
+  resource_group_name = azurerm_migrate_project.test.resource_group_name
 }
 `, template)
 }
